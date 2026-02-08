@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Home
   Date: 04.02.2026
@@ -23,7 +23,7 @@
 
                 <%
                     List<String> names = (List<String>) request.getAttribute("userNames");
-                    if(names != null && !names.isEmpty){
+                    if(names != null && !names.isEmpty()){
                         out.println("<ui>");
                         for(String s : names){
                             out.println("<li>" + s + "</li>");

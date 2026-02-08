@@ -16,7 +16,7 @@
     </div>
         <div>
             <%
-                if(request.getAttribute("userName" != null)
+                if(request.getAttribute("userName") != null)
                     out.println("<p>User '" + request.getAttribute("userName") + "' added!</p>");
             %>
         </div>
@@ -42,7 +42,7 @@
     </div>
 
     <div>
-        <button onclick="locatiin.href='/'"> Back to main</button>
+        <button onclick="locatiin.href='/"> Back to main</button>
     </div>
 </body>
 </html>
