@@ -32,7 +32,7 @@
     <!-- del servlet -->
     <servlet>
         <servlet-name>del</servlet-name>
-        <servlet-class>app.servlets.DelSetvlet</servlet-class>
+        <servlet-class>app.servlets.DelServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
