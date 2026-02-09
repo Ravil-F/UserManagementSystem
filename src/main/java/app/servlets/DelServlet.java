@@ -10,18 +10,26 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class DelSetvlet extends HttpServlet {
-    protected void goGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+public class DelServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
         List<String> names = model.list();
         req.setAttribute("userNames", names);
 
-        String delName = req.getParameter("name");
-        model.del(delName);
-
-        RequestDispatcher dispatcher = req.getRequestDispatcher("views/del.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/del.jsp");
         dispatcher.forward(req, resp);
 
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        String delName = req.getParameter("name");
+        Model model = Model.getInstance();
+        model.del(delName);
+
+//        resp.sendRedirect(req.getContextPath() + "/del");
     }
 
 }
