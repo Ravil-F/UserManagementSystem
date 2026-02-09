@@ -30,4 +30,14 @@ public class Model {
                 .collect(Collectors.toList());
     }
 
+    public void del(String name){
+        boolean flag = true;
+        for(int i = 0; i < model.size() && flag; i++){
+            if(model.get(i).getName().equals(name)) {
+                model.remove(i);
+                flag = false;
+            }
+        }
+    }
+
 }

@@ -14,8 +14,14 @@ public class DelSetvlet extends HttpServlet {
     protected void goGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
         List<String> names = model.list();
+        req.setAttribute("userNames", names);
+
+        String delName = req.getParameter("name");
+        model.del(delName);
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("views/del.jsp");
         dispatcher.forward(req, resp);
+
     }
 
 }
