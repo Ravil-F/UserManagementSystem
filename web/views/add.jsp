@@ -42,8 +42,8 @@
 
                 <label>Gender:
                     <select>
-                        <option>Male</option>
-                        <option>Female</option>
+                        <option>M</option>
+                        <option>F</option>
                     </select>
                 </label>
 
@@ -54,7 +54,7 @@
                 </label>
 
                 <label class="email">Email:
-                    <input type="password" name="email">
+                    <input type="text" name="email">
                 </label>
                 <button type="submit">Submit</button>
             </form>

@@ -64,4 +64,8 @@ public class Model {
         }
     }
 
+    public List<User> getAllUsers(){
+        return new ArrayList<>(model);
+    }
+
 }

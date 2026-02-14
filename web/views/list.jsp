@@ -21,13 +21,7 @@
                     <h2> Users </h2>
                     <div class="information">
                 <%
-//                    List<String> names = (List<String>) request.getAttribute("userNames");
-//                    List<String> last_names = (List<String>) request.getAttribute("lastNames");
-//                    List<Character> gender = (List<Character>) request.getAttribute("gender");
-//                    List<Integer> age = (List<Integer>) request.getAttribute("age");
-//                    List<String> email = (List<String>) request.getAttribute("email");
-                    List<User> users = (List<User>) request.getAttribute("user");
-
+                    List<User> users = (List<User>) request.getAttribute("users");
                     if(users != null && !users.isEmpty()){
                         out.println("<ui>");
                         for(User user : users){

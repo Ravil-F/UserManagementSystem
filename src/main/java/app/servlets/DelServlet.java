@@ -1,5 +1,6 @@
 package app.servlets;
 
+import app.entities.User;
 import app.model.Model;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -15,7 +16,8 @@ public class DelServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
-        Utils.setUserAttiributes(req);
+        List<User> users = model.getAllUsers();
+        req.setAttribute("users", users);
 
         String delName = req.getParameter("name");
         model.del(delName);
