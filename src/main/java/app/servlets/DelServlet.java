@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.net.http.HttpHeaders;
 import java.util.List;
 
 public class DelServlet extends HttpServlet {
@@ -19,12 +20,17 @@ public class DelServlet extends HttpServlet {
         List<User> users = model.getAllUsers();
         req.setAttribute("users", users);
 
-        String delName = req.getParameter("name");
-        model.del(delName);
-
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/del.jsp");
         dispatcher.forward(req, resp);
+    }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        Model model = Model.getInstance();
+
+        String delName = req.getParameter("name");
+        model.del(delName);
+        doGet(req, resp);
     }
 
 }

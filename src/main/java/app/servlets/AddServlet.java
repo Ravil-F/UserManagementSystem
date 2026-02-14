@@ -41,8 +41,6 @@ public class AddServlet extends HttpServlet {
             int age = Integer.parseInt(ageStr.trim());
             email = email.trim();
             User user = new User(name, lastName, gender, age, email);
-
-            System.out.println("Добавляю пользователя: " + name + " " + lastName);
             Model model = Model.getInstance();
             model.add(user);
 
