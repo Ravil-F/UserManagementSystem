@@ -3,12 +3,12 @@ package app.entities;
 public class User {
     private String name;
     private String lastName;
-    private char gender;
+    private String gender;
     private int age;
     private String email;
 
     public User(){}
-    public User(String name, String lastName, char gender, int age, String email){
+    public User(String name, String lastName, String gender, int age, String email){
         this.name = name;
         this.lastName = lastName;
         this.gender = gender;
@@ -32,11 +32,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -99,7 +99,7 @@ public class User {
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + gender;
+        result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + age;
         result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;

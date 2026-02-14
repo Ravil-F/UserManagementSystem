@@ -11,7 +11,7 @@ public class Utils {
         Model model = Model.getInstance();
         List<String> names = model.listName();
         List<String> lastNames = model.listLastName();
-        List<Character> genders = model.listGender();
+        List<String> genders = model.listGender();
         List<Integer> ages = model.listAge();
         List<String> emails = model.listEmail();
 

@@ -41,14 +41,14 @@
                 </label>
 
                 <label>Gender:
-                    <select>
-                        <option>M</option>
-                        <option>F</option>
+                    <select name="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
                     </select>
                 </label>
 
                  <label>Age:
-                    <select class="age">
+                    <select name = "age" class="age">
                         
                     </select>
                 </label>

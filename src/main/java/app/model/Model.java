@@ -36,7 +36,7 @@ public class Model {
                 .collect(Collectors.toList());
     }
 
-    public List<Character> listGender(){
+    public List<String> listGender(){
         return model.stream()
                 .map(User::getGender)
                 .collect(Collectors.toList());

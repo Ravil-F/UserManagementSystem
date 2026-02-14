@@ -1,4 +1,5 @@
 <%@ page import="java.util.List" %>
+<%@ page import="app.entities.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ru">
@@ -18,14 +19,19 @@
             <h2>Users</h2>
             <div>
                 <%
-                    List<String> names = (List<String>) request.getAttribute("userNames");
-                    if(names != null && !names.isEmpty()){
+                    List<User> users = (List<User>) request.getAttribute("users");
+                    if(users != null && !users.isEmpty()){
                         out.println("<ui>");
-                        for(String s : names){
-                            out.println("<li>" + s + "</li>");
+                        for(User user : users){
+                            out.println("<li>" + user.getName() + " | "
+                                    + user.getLastName() + " | "
+                                    + user.getGender() + " | "
+                                    + user.getAge() + " | "
+                                    + user.getEmail() + " | "
+                                    + "</li>");
                         }
                         out.println("</ui>");
-                    }else out.println("<p> There are no users yet! </p>");
+                    }else out.println("<p> There are no users yet!</p>");
                 %>
             </div>
         </section>
