@@ -47,7 +47,7 @@
     </main>
 
     <footer>
-        <button onclick="location.href='../../webapp'" > Back to main</button>
+        <button onclick="location.href='../../UserManagementSystem'" > Back to main</button>
     </footer>
 
 </body>
