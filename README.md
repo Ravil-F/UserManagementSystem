@@ -75,7 +75,7 @@
 
 3. **Откройте проект в IntelliJ IDEA**
 
-  * File → Open → выберите папку с проектом
+   * File → Open → выберите папку с проектом
 
 4. **Настройте Tomcat 11:**
  
@@ -105,7 +105,7 @@
 ### Способ 2: Запуск через Tomcat
 
 1. **Установите Apache Tomcat 11**  
-   Скачайте с [официального сайта](https://tomcat.apache.org/download-11.cgi) и распакуйте в удобную папку (например, `C:\Tomcat 11.0`)
+   * Скачайте с [официального сайта](https://tomcat.apache.org/download-11.cgi) и распакуйте в удобную папку (например, `C:\Tomcat 11.0`)
 
 2. **Соберите проект с помощью Maven:**
    ```bash
@@ -113,16 +113,16 @@
 
 3 **Скопируйте WAR-файл из папки target в папку webapps вашего Tomcat**
 #### Пример для Windows
-copy target\UserManagementSystem.war C:\Tomcat 11.0\webapps\
+   * copy target\UserManagementSystem.war C:\Tomcat 11.0\webapps\
 
 #### Пример для Linux/Mac
-cp target/UserManagementSystem.war /путь/к/tomcat/webapps/
+   * cp target/UserManagementSystem.war /путь/к/tomcat/webapps/
 
 4. **Запустите Tomcat:**
 
-bash
+   * bash
 #### Windows
-C:\Tomcat 11.0\bin\startup.bat
+   * C:\Tomcat 11.0\bin\startup.bat
 
 #### Linux/Mac
-/путь/к/tomcat/bin/startup.sh
+   * /путь/к/tomcat/bin/startup.sh
