@@ -111,7 +111,7 @@
    ```bash
    mvn clean package
 
-3 **Скопируйте WAR-файл из папки target в папку webapps вашего Tomcat**
+3. **Скопируйте WAR-файл из папки target в папку webapps вашего Tomcat**
    #### Пример для Windows
    * copy target\UserManagementSystem.war C:\Tomcat 11.0\webapps\
 
