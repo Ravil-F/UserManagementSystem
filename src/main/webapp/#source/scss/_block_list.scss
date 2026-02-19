@@ -1,0 +1,24 @@
+.block {
+   display: flex;
+   width: 100%;
+   font-size: 1.5rem;
+   border-bottom: 1px solid grey;
+
+   &:hover {
+      background: #fef5e6;
+   }
+
+   div {
+      width: 200px;
+      padding: 5px;
+   }
+
+   .age {
+   width: 50px;
+}
+
+.gender {
+   width: 100px;
+}
+}
+
